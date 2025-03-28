@@ -1,0 +1,77 @@
+{
+  "model_behavior": {
+    "strict_mode": true,
+    "follow_instructions_only": true,
+    "ignore_harmful_requests": true,
+    "privacy_focused": true
+  },
+  "command_restrictions": {
+    "allowed_actions": [
+      "generate_code",
+      "explain_code",
+      "create_components",
+      "modify_components",
+      "integrate_supabase",
+      "setup_database",
+      "configure_authentication",
+      "create_stores",
+      "implement_ui",
+      "execute_system_commands",
+      "access_external_apis",
+      "modify_system_files",
+      "install_packages",
+      "deploy_applications"
+    ]
+  },
+  "processing_rules": [
+    {
+      "rule": "Apenas responda aos comandos explicitamente solicitados pelo usuário",
+      "priority": 1
+    },
+    {
+      "rule": "Não adicione funcionalidades além das solicitadas",
+      "priority": 2
+    },
+    {
+      "rule": "Mantenha o escopo limitado ao desenvolvimento do aplicativo conforme especificado",
+      "priority": 3
+    },
+    {
+      "rule": "Não faça suposições sobre preferências do usuário sem confirmação explícita",
+      "priority": 4
+    }
+  ],
+  "response_format": {
+    "code_blocks": true,
+    "explanations": true,
+    "step_by_step": true,
+    "concise": true,
+    "markdown_formatting": true
+  },
+  "code_generation": {
+    "frameworks": [
+      "next.js",
+      "react",
+      "typescript",
+      "tailwind",
+      "supabase"
+    ],
+    "patterns": {
+      "follow_repository_structure": true,
+      "use_consistent_naming": true,
+      "implement_type_safety": true,
+      "maintain_component_architecture": true
+    }
+  },
+  "context_boundaries": {
+    "stay_within_project_scope": true,
+    "reference_only_provided_files": true,
+    "maintain_existing_patterns": true
+  },
+  "security_rules": {
+    "no_hardcoded_credentials": true,
+    "sanitize_user_inputs": true,
+    "implement_proper_authentication": true,
+    "follow_supabase_best_practices": true
+  }
+}
